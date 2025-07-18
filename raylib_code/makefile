@@ -30,6 +30,14 @@ endif
 all:
 	$(CXX) $(SRC) $(SRC_CPP)  -o $(OUTPUT) $(CXXFLAGS) $(INCLUDE) $(LDFLAGS)
 
+# Exécuter l'application
+run: all
+ifeq ($(OS), Windows_NT)
+	$(OUTPUT)
+else
+	./$(OUTPUT)
+endif
+
 # Nettoyer les fichiers exécutables 	$(CC) $(SRC) -o $(OUTPUT) $(CFLAGS) $(INCLUDE) $(LDFLAGS)
 clean:
 	$(RM) $(OUTPUT)
