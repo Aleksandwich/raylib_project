@@ -14,4 +14,8 @@ void updateScene(void);
 void drawScene(void);
 void cleanupScene(void);
 
+// Model loading and unloading functions
+void loadModels(void);
+void unloadModels(void);
+
 #endif // RENDERER_H
